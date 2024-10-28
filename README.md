@@ -2,10 +2,10 @@
 
 ## Screenshots after completion
 
-### Buttons blue shadow, links orange shadow (non-reversed) 
+### Buttons blue highlight, links orange highlight (non-reversed) 
 ![Buttons blue shadow, links orange shadow (non-reversed)](screenshots/omniplex-ext-normal.png)
 
-### Buttons orange shadow, links blue shadow (reversed) 
+### Buttons orange highlight, links blue highlight (reversed) 
 ![Logged extension's local storage](screenshots/omniplex-ext-reversed.png)
 
 ### Logged extension's local storage
