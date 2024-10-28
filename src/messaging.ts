@@ -8,7 +8,7 @@ export interface PageData {
   elements: TagInfo[];
 }
 
-export interface MessageType = {
+export interface MessageType {
   type: 'STORE_ELEMENTS';
   data: PageData;
 }
