@@ -1,5 +1,17 @@
 # Omniplex Learning Technical Test
 
+## Screenshots after completion
+
+### Buttons blue shadow, links orange shadow (non-reversed) 
+![Buttons blue shadow, links orange shadow (non-reversed)](screenshots/omniplex-ext-normal.png)
+
+### Buttons orange shadow, links blue shadow (reversed) 
+![Logged extension's local storage](screenshots/omniplex-ext-reversed.png)
+
+### Logged extension's local storage
+![Logged extension's local storage](screenshots/omniplex-ext-logged-storage.png)
+
+# Original Task Info
 ## Getting Started
 
 1. Clone this repository locally
