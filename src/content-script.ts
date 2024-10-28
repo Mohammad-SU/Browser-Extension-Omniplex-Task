@@ -1,45 +1,29 @@
 import { MessageType, TagInfo } from './messaging';
 
-function collectElements(): TagInfo[] {
-    const elements: TagInfo[] = [];
-    
-    const buttons = document.getElementsByTagName('button');
-    const links = document.getElementsByTagName('a');
+const collectElements = (): TagInfo[] => {
+  // If button, only add tagname
+  const buttons = Array.from(document.querySelectorAll('button'))
+      .map(() => ({ tagName: 'button' }));
+      
+  // If link, also add href
+  const links = Array.from(document.querySelectorAll('a'))
+      .map(link => ({ 
+          tagName: 'a', 
+          href: (link as HTMLAnchorElement).href 
+      }));
 
-    // If button, only add tagname
-    for (const button of buttons) {
-        elements.push({
-            tagName: 'button'
-        });
-    }
-
-    // If link, also add href
-    for (const link of links) {
-        elements.push({
-            tagName: 'a',
-            href: link.href
-        });
-    }
-
-    return elements;
+  return [...buttons, ...links];
 }
 
 function highlightElements(reverse: boolean = false) {
-    const buttons = document.getElementsByTagName('button');
-    const links = document.getElementsByTagName('a');
-
     const buttonColor = reverse ? 'orange' : 'blue';
     const linkColor = reverse ? 'blue' : 'orange';
 
-    // Highlight buttons
-    for (const button of buttons) {
-        button.style.boxShadow = `0 0 20px ${buttonColor}`;
-    }
-
-    // Highlight links
-    for (const link of links) {
-        link.style.boxShadow = `0 0 20px ${linkColor}`;
-    }
+    document.querySelectorAll('button')
+        .forEach(button => button.style.boxShadow = `0 0 20px ${buttonColor}`);
+        
+    document.querySelectorAll('a')
+        .forEach(link => link.style.boxShadow = `0 0 20px ${linkColor}`);
 }
 
 function init() {
