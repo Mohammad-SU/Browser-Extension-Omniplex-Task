@@ -15,7 +15,7 @@ const collectElements = (): TagInfo[] => {
   return [...buttons, ...links];
 }
 
-function highlightElements(reverse: boolean = false) {
+const highlightElements = (reverse: boolean = false) => {
     const buttonColor = reverse ? 'orange' : 'blue';
     const linkColor = reverse ? 'blue' : 'orange';
 
@@ -26,7 +26,7 @@ function highlightElements(reverse: boolean = false) {
         .forEach(link => link.style.boxShadow = `0 0 20px ${linkColor}`);
 }
 
-function init() {
+const init = () => {
     console.log("Content script initialized");
 
     const urlParams = new URLSearchParams(window.location.search);
