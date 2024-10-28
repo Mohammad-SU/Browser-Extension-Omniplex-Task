@@ -1,4 +1,3 @@
-// background.ts
 import { MessageType, PageData } from './messaging';
 
 // Listen for messages from content script

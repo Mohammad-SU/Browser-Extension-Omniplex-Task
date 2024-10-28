@@ -1,4 +1,3 @@
-// content-script.ts
 import { MessageType, TagInfo } from './messaging';
 
 function collectElements(): TagInfo[] {
@@ -43,7 +42,6 @@ function highlightElements(reverse: boolean = false) {
     }
 }
 
-// Initial execution
 function init() {
     console.log("Content script initialized");
 
@@ -52,7 +50,7 @@ function init() {
     
     const elements = collectElements();
     
-    // Send to background script
+    // Send elements to background script
     chrome.runtime.sendMessage<MessageType>({
         type: 'STORE_ELEMENTS',
         data: {
